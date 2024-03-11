@@ -1,8 +1,8 @@
 resource "aws_instance" "my-ec2" {
-  ami                    = "ami-0d92749d46e71c34c"
+  ami                    = "ami-0237525b5672165b3"
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.vpc-dev-public-subnet-1.id
-  key_name               = "santhosh-1"
+  key_name               = "santhosh"
   user_data              = <<-EOF
     #!/bin/bash
     sudo yum update -y
