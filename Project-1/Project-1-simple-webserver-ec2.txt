@@ -1,0 +1,2 @@
+Project 1: Create a VPC and deploy a instance use metadata to install webserver.
+DO the same steps with terraform
