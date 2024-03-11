@@ -1,5 +1,5 @@
 resource "aws_instance" "my-ec2" {
-  ami                    = "ami-0237525b5672165b3"
+  ami                    = "ami-07761f3ae34c4478d "
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.vpc-dev-public-subnet-1.id
   key_name               = "santhosh"
