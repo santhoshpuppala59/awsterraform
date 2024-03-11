@@ -81,7 +81,7 @@ resource "aws_internet_gateway" "myvpc_igw" {
 #####################Nat Gateway###########################
 
 resource "aws_eip" "nat-eip" {
-  vpc = true
+  domain = "vpc"
    tags = {
       Name = "nat-eip"
       }
@@ -90,6 +90,7 @@ resource "aws_eip" "nat-eip" {
 resource "aws_nat_gateway" "nat" {
   allocation_id = aws_eip.nat-eip.id
   subnet_id     = aws_subnet.vpc-dev-public-subnet-1.id
+  depends_on    = [aws_internet_gateway.myvpc_igw]
   tags = {
       Name = "nat-gateway"
       }
@@ -142,7 +143,7 @@ resource "aws_route_table_association" "vpc-rt-ass-pub-1b" {
 
 ############# Route for NAT Gateway###############################
 resource "aws_route" "private_internet_gateway" {
-  route_table_id         = aws_route_table.private.id
+  route_table_id         = aws_route_table.private_rt.id
   destination_cidr_block = "0.0.0.0/0"
   gateway_id             = aws_nat_gateway.nat.id
 }
