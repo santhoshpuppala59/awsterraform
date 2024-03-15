@@ -46,12 +46,12 @@ variable "pc_pub_sub2_cidr" {
   default     = "10.1.3.0/24"
 }
 variable "vpc_pri_sub1_cidr" {
-  description = "VPC CIDR
+  description = "VPC private subnet1"
   type        = string
   default     = "10.1.2.0/24"
 }
 variable "vpc_pri_sub2_cidr" {
-  description = "VPC CIDR
+  description = "VPC private subnet2"
   type        = string
   default     = "10.1.4.0/24"
 }
