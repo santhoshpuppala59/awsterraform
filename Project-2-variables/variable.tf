@@ -40,7 +40,7 @@ variable "vpc_pub_sub1_cidr" {
   type        = string
   default     = "10.1.1.0/24"
 }
-variable "pc_pub_sub2_cidr" {
+variable "vpc_pub_sub2_cidr" {
   description = "VPC pub subnet2"
   type        = string
   default     = "10.1.3.0/24"
