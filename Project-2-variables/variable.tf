@@ -30,7 +30,7 @@ variable "ec2_key_pair" {
 }
 
 variable "vpc_cidr" {
-  description = "VPC CIDR
+  description = "VPC CIDR"
   type        = string
   default     = "10.1.0.0/16"
 }
