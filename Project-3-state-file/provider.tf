@@ -13,7 +13,6 @@ terraform {
     key    = "dev/terraform.tfstate"
     region = "us-east-1" 
 /*
-    # Enable during Step-09     
     # For State Locking
     dynamodb_table = "terraform-dev-state-table"    
 */    
@@ -25,7 +24,3 @@ provider "aws" {
   region  = var.aws_region
   profile = "default"
 }
-/*
-Note-1:  AWS Credentials Profile (profile = "default") configured on your local desktop terminal  
-$HOME/.aws/credentials
-*/
